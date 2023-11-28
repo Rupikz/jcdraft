@@ -1,0 +1,14 @@
+<Configuration>
+    <Appenders>
+        <Appender name="Console" target="console" pattern="{dd-MM-yyyy HH:mm:ss} level - msg"/>
+        <Appender name="Audit"
+                  target="file"
+                  fileName="log/AuditEvents_{yyyy-MM-dd}.log"
+                  pattern="{dd-MM-yyyy HH:mm:ss} level - msg"/>
+    </Appenders>
+    <Loggers>
+        <Logger name="rootLogger" level="DEBUG" appenderRef="Console"/>
+        <Logger name="auditLogger" level="DEBUG" appenderRef="Audit"/>
+        <Logger name="apiLogger" level="DEBUG" appenderRef="Console"/>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,40 @@
+# Получить список всех сущностей
+GET http://localhost:8080/api/v1/person/list
+content-type: application/xml
+
+###
+
+# Найти сущность по имени, начинающегося на
+GET http://localhost:8080/api/v1/person/find?firstName=O
+content-type: application/xml
+
+###
+
+# Сохранить объект
+PUT http://localhost:8080/api/v1/person/save
+content-type: application/xml
+
+<person>
+    <firstName>Grigory</firstName>
+    <dateOfBirth>1991-01-15</dateOfBirth>
+    <gender>MALE</gender>
+</person>
+
+###
+
+# Обновить объект
+PUT http://localhost:8080/api/v1/person/save
+content-type: application/xml
+
+<person>
+    <id>5f8e20bc-06b2-48f0-8f57-9c13078a9815</id>
+    <firstName>Grigory</firstName>
+    <dateOfBirth>1991-09-17</dateOfBirth>
+    <gender>MALE</gender>
+</person>
+
+###
+
+# Удалить объект
+DELETE http://localhost:8080/api/v1/person/delete?id=b0eb0e77-8f53-46b5-b7ba-2c6d226e24b7
+content-type: application/xml

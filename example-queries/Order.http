@@ -1,0 +1,61 @@
+# Получить список всех сущностей
+GET http://localhost:8080/api/v1/order/list
+content-type: application/xml
+
+###
+
+# Получить пагинированный список всех сущностей
+GET http://localhost:8080/api/v1/order/page?offset=0&size=10&status=NEW
+content-type: application/xml
+
+# Filters:
+# - managerName
+# - status
+
+# Query params:
+# - offset
+# - size
+
+###
+
+# Найти сущность по id
+GET http://localhost:8080/api/v1/order/find?id=65ad4859-43db-499d-afeb-51bba66ca933
+content-type: application/xml
+
+###
+
+# Сохранить объект
+PUT http://localhost:8080/api/v1/order/save
+content-type: application/xml
+
+<order>
+    <managerName>Иванов Иван Иванович</managerName>
+    <clientName>Иванов Семен Иванович</clientName>
+    <carsId>
+        <carId>3c8a143f-c405-432d-b213-9cabc5afe043</carId>
+        <carId>4b4b259f-e352-4457-a2ac-53feca685af9</carId>
+    </carsId>
+</order>
+
+###
+
+# Обновить объект
+PUT http://localhost:8080/api/v1/order/save
+content-type: application/xml
+
+<order>
+    <id>65ad4859-43db-499d-afeb-51bba66ca933</id>
+    <status>COMPLETED</status>
+    <managerName>Иванов Иван Иванович</managerName>
+    <clientName>Иванов Семен Иванович</clientName>
+    <carsId>
+        <carId>3c8a143f-c405-432d-b213-9cabc5afe043</carId>
+        <carId>4b4b259f-e352-4457-a2ac-53feca685af9</carId>
+    </carsId>
+</order>
+
+###
+
+# Удалить объект
+DELETE http://localhost:8080/api/v1/order/delete?id=65ad4859-43db-499d-afeb-51bba66ca933
+content-type: application/xml

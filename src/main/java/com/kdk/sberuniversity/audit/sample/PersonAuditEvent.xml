@@ -1,0 +1,13 @@
+<auditEvent>
+    <actionDateTime>2021-11-05T20:30:00+03:00</actionDateTime>
+    <entity>PERSON</entity>
+    <action>UPDATE</action>
+    <body>
+        <person>
+            <id>802bab9f-6d63-4277-9b4f-3dfd49357a58</id>
+            <firstName>Grigory</firstName>
+            <dateOfBirth>1992-05-01</dateOfBirth>
+            <gender>MALE</gender>
+        </person>
+    </body>
+</auditEvent>
